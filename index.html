@@ -4685,37 +4685,58 @@
 
     <!-- Nature Aadhar Chatbot -->
     <style>
-      #na-chat-btn { position:fixed; bottom:28px; right:28px; width:60px; height:60px; border-radius:50%; background:#056737; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(5,103,55,.35); z-index:9999; transition:transform .2s; }
-      #na-chat-btn:hover{transform:scale(1.08)}
+      #na-chat-btn { position:fixed; bottom:28px; right:28px; width:60px; height:60px; border-radius:50%; background:#056737; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(5,103,55,.4); z-index:9999; transition:all .3s cubic-bezier(.175, .885, .32, 1.275); }
+      #na-chat-btn:hover{transform:scale(1.1) rotate(5deg)}
       #na-chat-btn svg{width:28px;height:28px;fill:#fff}
-      #na-chat-box { position:fixed; bottom:100px; right:0px; width:370px; max-height:560px; background:#fff; border-radius:18px; border:1px solid #e2e8f0; display:flex; flex-direction:column; z-index:9998; box-shadow:0 8px 32px rgba(0,0,0,.13); overflow:hidden; transform:scale(.92) translateY(16px); opacity:0; pointer-events:none; transition:all .22s cubic-bezier(.4,0,.2,1); }
-      #na-chat-box.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
-      #na-chat-header{background:#056737;padding:14px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0}
-      #na-chat-header .avatar{width:38px;height:38px;border-radius:50%;background:#f8b42d;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#056737;flex-shrink:0}
-      #na-chat-header .name{color:#fff;font-size:15px;font-weight:600;line-height:1.2}
-      #na-chat-header .sub{color:rgba(255,255,255,.75);font-size:12px}
-      #na-close-btn{background:none;border:none;cursor:pointer;color:rgba(255,255,255,.8);font-size:20px;padding:0;line-height:1}
-      #na-close-btn:hover{color:#fff}
-      #na-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 8px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
-      .na-msg{max-width:85%;font-size:13.5px;line-height:1.55;padding:9px 13px;border-radius:14px;word-break:break-word}
-      .na-msg.bot{background:#f0f9f4;color:#1a3a2a;border-bottom-left-radius:4px;align-self:flex-start;border:1px solid #c8e6d4}
-      .na-msg.user{background:#056737;color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
-      .na-typing{background:#f0f9f4;color:#056737;font-size:13px;padding:9px 14px;border-radius:14px;border-bottom-left-radius:4px;align-self:flex-start;border:1px solid #c8e6d4;display:none}
+      #na-chat-box { position:fixed; bottom:100px; right:28px; width:380px; max-height:600px; background:#fff; border-radius:24px; border:1px solid rgba(0,0,0,.08); display:flex; flex-direction:column; z-index:9998; box-shadow:0 12px 48px rgba(0,0,0,.15); overflow:hidden; transform-origin: bottom right; transform: scale(0) translateY(40px) translateX(20px); opacity:0; pointer-events:none; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+      #na-chat-box.open{transform:scale(1) translateY(0) translateX(0);opacity:1;pointer-events:all}
+      #na-chat-header{background:#056737;padding:18px 20px;display:flex;align-items:center;gap:12px;flex-shrink:0}
+      #na-chat-header .avatar{width:42px;height:42px;border-radius:50%;background:#f8b42d;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#056737;flex-shrink:0;box-shadow: 0 2px 8px rgba(0,0,0,.1)}
+      #na-chat-header .name{color:#fff;font-size:16px;font-weight:600;line-height:1.2}
+      #na-chat-header .sub{color:rgba(255,255,255,.8);font-size:12px}
+      #na-close-btn{background:rgba(255,255,255,.1);border:none;cursor:pointer;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition: background .2s}
+      #na-close-btn:hover{background:rgba(255,255,255,.2)}
+      #na-chat-msgs{flex:1;overflow-y:auto;padding:20px 18px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth;background:#fcfdfc}
+      .na-msg{max-width:85%;font-size:14px;line-height:1.6;padding:10px 14px;border-radius:18px;word-break:break-word;animation: naMsgIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;}
+      @keyframes naMsgIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .na-msg.bot{background:#fff;color:#1a3a2a;border-bottom-left-radius:4px;align-self:flex-start;box-shadow: 0 2px 8px rgba(0,0,0,.04);border: 1px solid #eef3f0}
+      .na-msg.user{background:#056737;color:#fff;border-bottom-right-radius:4px;align-self:flex-end;box-shadow: 0 4px 12px rgba(5,103,55,.2)}
+      .na-typing{background:#fff;color:#056737;font-size:13px;padding:12px 18px;border-radius:18px;border-bottom-left-radius:4px;align-self:flex-start;box-shadow: 0 2px 8px rgba(0,0,0,.04);display:none;border: 1px solid #eef3f0}
       .na-typing.show{display:block}
       .na-dot{display:inline-block;animation:nabounce 1s infinite}
       .na-dot:nth-child(2){animation-delay:.15s}
       .na-dot:nth-child(3){animation-delay:.3s}
       @keyframes nabounce{0%,80%,100%{opacity:.3}40%{opacity:1}}
-      #na-quick-qs{padding:6px 14px 10px;display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0}
-      .na-q-btn{background:#f0f9f4;border:1px solid #b2d8be;color:#056737;font-size:12px;padding:5px 10px;border-radius:20px;cursor:pointer;transition:all .15s;white-space:nowrap}
-      .na-q-btn:hover{background:#056737;color:#fff;border-color:#056737}
-      #na-chat-input-row{padding:10px 12px 12px;border-top:1px solid #e8f0ec;display:flex;gap:8px;align-items:center;flex-shrink:0}
-      #na-chat-input{flex:1;border:1px solid #d0e8d8;border-radius:22px;padding:9px 14px;font-size:13.5px;outline:none;background:#f9fdf9;color:#1a3a2a}
-      #na-chat-input:focus{border-color:#056737}
-      #na-send-btn{width:38px;height:38px;border-radius:50%;background:#056737;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s}
-      #na-send-btn:hover{background:#044d29}
-      #na-send-btn svg{width:18px;height:18px;fill:#fff}
+      #na-quick-qs{padding:10px 18px 15px;display:flex;flex-wrap:wrap;gap:8px;flex-shrink:0;background:#fcfdfc}
+      .na-q-btn{background:#fff;border:1px solid #e2ece6;color:#056737;font-size:12px;padding:7px 14px;border-radius:20px;cursor:pointer;transition:all .2s;white-space:nowrap;box-shadow: 0 2px 5px rgba(0,0,0,.03)}
+      .na-q-btn:hover{background:#056737;color:#fff;border-color:#056737;transform:translateY(-2px);box-shadow: 0 4px 10px rgba(5,103,55,.15)}
+      #na-chat-input-row{padding:12px 18px 18px;border-top:1px solid rgba(0,0,0,.05);display:flex;gap:10px;align-items:center;flex-shrink:0;background:#fff}
+      #na-chat-input{flex:1;border:1px solid #e2ece6;border-radius:24px;padding:11px 16px;font-size:14px;outline:none;background:#f8faf9;color:#1a3a2a;transition: all .2s}
+      #na-chat-input:focus{border-color:#056737;background:#fff;box-shadow: 0 0 0 3px rgba(5,103,55,.08)}
+      #na-send-btn{width:42px;height:42px;border-radius:50%;background:#056737;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+      #na-send-btn:hover{background:#044d29;transform: scale(1.05)}
+      #na-send-btn svg{width:20px;height:20px;fill:#fff}
       #na-chat-box *{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+
+      
+      @media (max-width: 500px) {
+        #na-chat-box {
+          width: 100vw;
+          height: 100vh;
+          bottom: 0;
+          right: 0;
+          border-radius: 0;
+          max-height: none;
+          transform: translateY(100%) scale(1);
+        }
+        #na-chat-box.open {
+          transform: translateY(0) scale(1);
+        }
+        #na-chat-header {
+          padding: 18px;
+        }
+      }
+
     </style>
 
     <button id="na-chat-btn" title="Chat with us">
@@ -4754,8 +4775,55 @@
     let chatHistory = [], isLoading = false;
     const chatBtn=document.getElementById('na-chat-btn'),chatBox=document.getElementById('na-chat-box'),closeBtn=document.getElementById('na-close-btn'),msgsEl=document.getElementById('na-chat-msgs'),inputEl=document.getElementById('na-chat-input'),sendBtn=document.getElementById('na-send-btn'),typingEl=document.getElementById('na-typing');
     
-    chatBtn.addEventListener('click',()=>{chatBox.classList.toggle('open');if(chatBox.classList.contains('open'))inputEl.focus()});
-    closeBtn.addEventListener('click',()=>chatBox.classList.remove('open'));
+    const questionPool = [
+        "What is A2 Gir Cow Ghee?",
+        "What are the prices?",
+        "How is Bilona ghee made?",
+        "Do you deliver pan India?",
+        "What is Forest Honey?",
+        "Benefits of A2 Ghee?",
+        "Is your honey pure?",
+        "Shipping time?",
+        "Where is your farm located?",
+        "What is the shelf life?",
+        "Do you have COD?",
+        "Special offers?"
+    ];
+    let usedQs = [];
+
+    function renderQs() {
+        const container = document.getElementById('na-quick-qs');
+        container.innerHTML = '';
+        let available = questionPool.filter(q => !usedQs.includes(q));
+        if (available.length < 3) { usedQs = []; available = questionPool; }
+        const shuffled = available.sort(() => 0.5 - Math.random()).slice(0, 4);
+        shuffled.forEach(q => {
+            const btn = document.createElement('button');
+            btn.className = 'na-q-btn';
+            btn.textContent = q;
+            btn.onclick = () => {
+                usedQs.push(q);
+                sendMessage(q);
+                renderQs();
+            };
+            container.appendChild(btn);
+        });
+    }
+
+    chatBtn.addEventListener('click',()=>{
+        chatBox.classList.toggle('open');
+        if(chatBox.classList.contains('open')) {
+            if(window.innerWidth > 500) {
+                setTimeout(() => inputEl.focus(), 300);
+            } else {
+                chatBtn.style.display = 'none';
+            }
+        }
+    });
+    closeBtn.addEventListener('click',()=>{
+        chatBox.classList.remove('open');
+        if(window.innerWidth <= 500) chatBtn.style.display = 'flex';
+    });
     
     function addMsg(t,r){const d=document.createElement('div');d.className=`na-msg ${r}`;d.innerHTML=t;msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight}
     
@@ -4793,9 +4861,13 @@
         }
         isLoading=false
     }
-    window.askQ=function(q){sendMessage(q)};
+    window.askQ=function(q){sendMessage(q); usedQs.push(q); renderQs();};
     sendBtn.addEventListener('click',()=>{const t=inputEl.value.trim();if(t){sendMessage(t);inputEl.value=''}});
     inputEl.addEventListener('keydown',(e)=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();const t=inputEl.value.trim();if(t){sendMessage(t);inputEl.value=''}}});
+    
+    // Initial render
+    renderQs();
+
     </script>
 </body>
 
