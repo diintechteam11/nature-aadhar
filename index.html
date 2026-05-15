@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Nature Aadhar Online Shopping | Nature Aadhar Ecommerce</title>
+  <meta property="og:image" content="https://naturesadhaar.in/storage/app/public/company/2024-05-31-665a15b361ec9.webp" />
+  <meta property="og:title" content="Buy Pure A2 Gir Cow Ghee & Forest Honey – Natures Adhaar" />
+  <meta property="og:url" content="https://naturesadhaar.in">
+  <meta property="og:description" content="Shop pure A2 Gir Cow Ghee and natural forest honey from Natures Adhaar. 100% authentic, traditional and chemical-free products from India.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/front-end/css/home.css" />
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/front-end/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/front-end/css/owl.theme.default.min.css">
+  <link rel="stylesheet" media="screen" href="https://naturesadhaar.in/public/assets/front-end/vendor/tiny-slider/dist/tiny-slider.css">
+  <link rel="stylesheet" media="screen" href="https://naturesadhaar.in/public/assets/front-end/css/theme.css">
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/front-end/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/front-end/css/master.css" />
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/front-end/css/style.css">
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/custom-frontend/assets/css/app.css">
+  <link rel="stylesheet" href="https://naturesadhaar.in/public/assets/custom-frontend/assets/css/responsive.css">
+
+  <style>
+    :root {
+      --base: #056737;
+      --base-2: #f8b42d;
+      --web-primary: #056737;
+      --web-secondary: #f8b42d;
+    }
+
+    /* ===================== CHATBOT STYLES ===================== */
+    #na-chat-btn {
+      position: fixed;
+      bottom: 0px;
+      right: 28px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #056737;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(5,103,55,0.4);
+      z-index: 99999;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #na-chat-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(5,103,55,0.5);
+    }
+    #na-chat-btn svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+    #na-chat-btn .na-notif {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 12px;
+      height: 12px;
+      background: #f8b42d;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    #na-chat-box {
+      position: fixed;
+      bottom: 65px;
+      right: 28px;
+      width: 375px;
+      max-height: 580px;
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid #dceee4;
+      display: flex;
+      flex-direction: column;
+      z-index: 99998;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transform: scale(0.9) translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    #na-chat-box.open {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    @media (max-width: 480px) {
+      #na-chat-box {
+        width: calc(100vw - 20px);
+        right: 10px;
+        bottom: 90px;
+        max-height: calc(100vh - 120px);
+      }
+      #na-chat-btn {
+        bottom: 18px;
+        right: 18px;
+      }
+    }
+
+    #na-chat-header {
+      background: linear-gradient(135deg, #056737 0%, #07884a 100%);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    #na-chat-header .na-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #f8b42d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: #056737;
+      flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    #na-chat-header .na-hinfo { flex: 1; }
+    #na-chat-header .na-hname {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+    }
+    #na-chat-header .na-hsub {
+      color: rgba(255,255,255,0.78);
+      font-size: 11.5px;
+      margin: 2px 0 0;
+    }
+    #na-chat-header .na-online {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #7dffb3;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    #na-close-btn {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 18px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    #na-close-btn:hover { background: rgba(255,255,255,0.28); }
+
+    #na-chat-msgs {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px 14px 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      scroll-behavior: smooth;
+    }
+    #na-chat-msgs::-webkit-scrollbar { width: 4px; }
+    #na-chat-msgs::-webkit-scrollbar-track { background: transparent; }
+    #na-chat-msgs::-webkit-scrollbar-thumb { background: #c8e6d4; border-radius: 4px; }
+
+    .na-msg-wrap {
+      display: flex;
+      align-items: flex-end;
+      gap: 7px;
+    }
+    .na-msg-wrap.user { flex-direction: row-reverse; }
+    .na-msg-wrap .na-bot-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f0f9f4;
+      border: 1px solid #c8e6d4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .na-msg {
+      max-width: 80%;
+      font-size: 13.5px;
+      line-height: 1.6;
+      padding: 10px 14px;
+      border-radius: 16px;
+      word-break: break-word;
+    }
+    .na-msg.bot {
+      background: #f0f9f4;
+      color: #1a3a2a;
+      border-bottom-left-radius: 4px;
+      border: 1px solid #d4ece0;
+    }
+    .na-msg.user {
+      background: #056737;
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+    .na-msg a { color: #f8b42d; }
+
+    .na-time {
+      font-size: 10.5px;
+      color: #aaa;
+      text-align: right;
+      margin-top: -4px;
+      padding: 0 4px 4px;
+    }
+    .na-time.bot-t { text-align: left; padding-left: 36px; }
+
+    .na-typing-wrap {
+      display: none;
+      align-items: flex-end;
+      gap: 7px;
+    }
+    .na-typing-wrap.show { display: flex; }
+    .na-typing {
+      background: #f0f9f4;
+      padding: 10px 16px;
+      border-radius: 16px;
+      border-bottom-left-radius: 4px;
+      border: 1px solid #d4ece0;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .na-dot {
+      width: 7px;
+      height: 7px;
+      background: #056737;
+      border-radius: 50%;
+      opacity: 0.35;
+      animation: na-bounce 1.1s infinite;
+    }
+    .na-dot:nth-child(2) { animation-delay: 0.18s; }
+    .na-dot:nth-child(3) { animation-delay: 0.36s; }
+    @keyframes na-bounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: 0.35; }
+      40% { transform: translateY(-5px); opacity: 1; }
+    }
+
+    #na-quick-qs {
+      padding: 8px 12px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex-shrink: 0;
+      border-top: 1px solid #edf4f0;
+    }
+    #na-quick-label {
+      width: 100%;
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 2px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    .na-q-btn {
+      background: #f0f9f4;
+      border: 1px solid #b8ddc9;
+      color: #056737;
+      font-size: 11.5px;
+      padding: 5px 11px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    .na-q-btn:hover {
+      background: #056737;
+      color: #fff;
+      border-color: #056737;
+      transform: translateY(-1px);
+    }
+
+    #na-chat-input-row {
+      padding: 10px 12px 14px;
+      border-top: 1px solid #edf4f0;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-shrink: 0;
+      background: #fff;
+    }
+    #na-chat-input {
+      flex: 1;
+      border: 1.5px solid #d0e8d8;
+      border-radius: 24px;
+      padding: 9px 16px;
+      font-size: 13.5px;
+      outline: none;
+      background: #f9fdf9;
+      color: #1a3a2a;
+      transition: border-color 0.15s;
+      font-family: inherit;
+    }
+    #na-chat-input:focus { border-color: #056737; background: #fff; }
+    #na-chat-input::placeholder { color: #aac4b5; }
+
+    #na-send-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #056737;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s, transform 0.1s;
+    }
+    #na-send-btn:hover { background: #044d29; }
+    #na-send-btn:active { transform: scale(0.93); }
+    #na-send-btn svg { width: 18px; height: 18px; fill: #fff; }
+
+    #na-chat-footer-note {
+      text-align: center;
+      font-size: 10px;
+      color: #bbb;
+      padding: 0 0 8px;
+      flex-shrink: 0;
+    }
+    #na-chat-footer-note a { color: #056737; text-decoration: none; }
+
+    #na-chat-box * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    /* ===================== END CHATBOT STYLES ===================== */
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       YOUR ORIGINAL WEBSITE CONTENT STARTS HERE
+       (All original sections preserved exactly)
+  ============================================================ -->
+
+  <div class="modal-quick-view modal fade" id="quick-view" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content" id="quick-view-modal"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div id="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="inner flex-one">
+            <div class="top-bar-left top-box flex-three"></div>
+            <div class="top-bar-right top-box flex-three">
+              <h6 class="title-map flex-three link-style-2">
+                <i class="fal fa-phone-alt"></i>Customer Support :
+                <a href="tel:9971200204" class="fw-4 titles">9971200204</a>
+              </h6>
+              <div class="follow flex">
+                <h6 class="title-icon"> Follow Us: </h6>
+                <div class="icon-top link-style-2">
+                  <a href="https://www.facebook.com/naturestreasure.in" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/naturesgiftghee/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.youtube.com/channel/UCd2RhXe8yritM2x769SvYhg" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header id="header_main" class="header_1 js-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="site-header-inner">
+            <div class="wrap-box relative">
+              <a href="https://naturesadhaar.in">
+                <img src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/logo.png" alt="logo" width="169" height="42">
+              </a>
+              <span class="nav-icon" onclick="openNav()">&#9776;</span>
+              <!-- <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="https://naturesadhaar.in">Home</a>
+                <a href="https://naturesadhaar.in/about-us">About Us</a>
+                <a href="https://naturesadhaar.in/products">Our Products</a>
+                <a href="#">Applications With Benefits</a>
+                <a href="https://naturesadhaar.in/helpTopic">FAQ</a>
+                <a href="#">Blog</a>
+                <a href="https://naturesadhaar.in/contacts">Contact us</a>
+              </div> -->
+              <nav id="main-nav-mobi" class="main-nav-mobi">
+                <ul id="menu-primary-menu" class="menu">
+                  <li class="menu-item"><a href="https://naturesadhaar.in">Home</a></li>
+                  <li class="menu-item"><a href="https://naturesadhaar.in/about-us">About Us</a></li>
+                  <li class="menu-item"><a href="https://naturesadhaar.in/products">Our Products</a></li>
+                  <li class="menu-item"><a href="#">Applications With Benefits</a></li>
+                  <li class="menu-item"><a href="https://naturesadhaar.in/helpTopic">FAQ</a></li>
+                  <li class="menu-item"><a href="#">Blog</a></li>
+                  <li class="menu-item"><a href="https://naturesadhaar.in/contacts">Contact us</a></li>
+                </ul>
+              </nav>
+              <div class="flat-button-top flex" style="margin-right: 20px;">
+                <div class="navbar-tool dropdown me-2 ml-md-3">
+                  <div class="cart-box">
+                    <a href="https://naturesadhaar.in/shop-cart" class="cart"><i class="fas fa-shopping-basket"></i></a>
+                    <a href="https://naturesadhaar.in/shop-cart" class="cart-contents"><span>0</span></a>
+                  </div>
+                </div>
+                <div class="sc-btn-top" id="site-header" style="margin-left: 20px;">
+                  <div class="buttons">
+                    <a class="blob-btn btn-style" href="https://naturesadhaar.in/customer/auth/login">Login/Register
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <div class="__inline-61">
+    <section class="slider home">
+      <div class="swiper-container mainslider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slider-item">
+              <div class="flat-slider">
+                <div class="img-slider"><img class="img-item" src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/banner-new-1.png" alt="A2 Gir Cow Ghee Banner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider-item">
+              <div class="flat-slider">
+                <div class="img-slider"><img class="img-item" src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/banner-new-2.jpg" alt="Forest Honey Banner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider-item">
+              <div class="flat-slider">
+                <div class="img-slider"><img class="img-item" src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/banner-new-3.jpg" alt="Nature Aadhar Banner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination2"></div>
+      <div class="button-custom-slider">
+        <div class="swiper-button-next2 button-slide-custom-next">next <i class="far fa-arrow-circle-right"></i></div>
+        <div class="swiper-button-prev2 button-slide-custom-prev">prev</div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="tf-section2 flat-icon page2 center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="heading-section">
+              <h2 class="text-unset">Why Choose Nature's Drive India Private limited?</h2>
+              <p>It's a treasure of nature that has no comparison because we keep our cows in their natural habitat of forest without any boundaries which makes them happy and naturally healthy. This is the original, natural, desi ghee, prepared meticulously and rigorously according to age-old bilona methods from A2 milk of happy desi cows native to India. It's held in reverence being a source of nourishing sustenance since times immemorial.</p>
+            </div>
+            <div class="image"><img src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/point-final.jpg" alt="Why Choose Us"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="flat-vegetables page">
+      <div class="mark-img style-01"><img src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/mark/mark-1.png" alt=""></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="heading-section style center">
+              <h2>Trendy Products</h2>
+            </div>
+            <div class="flat-tabs themesflat-tabs">
+              <div class="content-tab">
+                <div class="content-inner tab-content">
+                  <div class="wrap-vegetables flex">
+
+                    <div class="box box-hv">
+                      <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-1-liter-6fmwuu" style="text-decoration:none;color:inherit">
+                        <div class="images hover-style">
+                          <img src="https://naturesadhaar.in/storage/app/public/product/meta/2024-08-27-66cce2065cdab.png" alt="A2 Gir Cow Ghee 1 ltr">
+                          <div class="tag-text">-29.5%</div>
+                        </div>
+                      </a>
+                      <div class="content">
+                        <h3 class="link-style-6"><a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-1-liter-6fmwuu" style="text-decoration:none;color:inherit">A2 Gir Cow Ghee (1 ltr)</a></h3>
+                        <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-1-liter-6fmwuu" style="text-decoration:none;color:inherit">
+                          <div class="money"><span class="one">&#8377; 3296</span><span class="two">&#8377; 2324 Excl. Taxes</span></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="box box-hv">
+                      <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-500-ml-owvgRC" style="text-decoration:none;color:inherit">
+                        <div class="images hover-style">
+                          <img src="https://naturesadhaar.in/storage/app/public/product/meta/2024-10-09-670682a0287e4.png" alt="A2 Gir Cow Ghee 500 ml">
+                          <div class="tag-text">-29.5%</div>
+                        </div>
+                      </a>
+                      <div class="content">
+                        <h3 class="link-style-6"><a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-500-ml-owvgRC" style="text-decoration:none;color:inherit">A2 Gir Cow Ghee (500 ml)</a></h3>
+                        <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-500-ml-owvgRC" style="text-decoration:none;color:inherit">
+                          <div class="money"><span class="one">&#8377; 1698</span><span class="two">&#8377; 1197 Excl. Taxes</span></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="box box-hv">
+                      <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-200-ml-jgISGJ" style="text-decoration:none;color:inherit">
+                        <div class="images hover-style">
+                          <img src="https://naturesadhaar.in/storage/app/public/product/meta/2024-05-02-66339acdb34ab.png" alt="A2 Gir Cow Ghee 200 ml">
+                          <div class="tag-text">-17.04%</div>
+                        </div>
+                      </a>
+                      <div class="content">
+                        <h3 class="link-style-6"><a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-200-ml-jgISGJ" style="text-decoration:none;color:inherit">A2 Gir Cow Ghee (200 ml)</a></h3>
+                        <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-200-ml-jgISGJ" style="text-decoration:none;color:inherit">
+                          <div class="money"><span class="one">&#8377; 675</span><span class="two">&#8377; 560 Excl. Taxes</span></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="box box-hv">
+                      <a href="https://naturesadhaar.in/product/forest-honey-500gm-zQNx7v" style="text-decoration:none;color:inherit">
+                        <div class="images hover-style">
+                          <img src="https://naturesadhaar.in/storage/app/public/product/meta/2024-10-09-6706872462bf6.png" alt="Forest Honey 500gm">
+                          <div class="tag-text">-24%</div>
+                        </div>
+                      </a>
+                      <div class="content">
+                        <h3 class="link-style-6"><a href="https://naturesadhaar.in/product/forest-honey-500gm-zQNx7v" style="text-decoration:none;color:inherit">Forest Honey – 500gm</a></h3>
+                        <a href="https://naturesadhaar.in/product/forest-honey-500gm-zQNx7v" style="text-decoration:none;color:inherit">
+                          <div class="money"><span class="one">&#8377; 735</span><span class="two">&#8377; 559 Excl. Taxes</span></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="box box-hv">
+                      <a href="https://naturesadhaar.in/product/forest-honey-250gm-6Dv1zf" style="text-decoration:none;color:inherit">
+                        <div class="images hover-style">
+                          <img src="https://naturesadhaar.in/storage/app/public/product/meta/2024-05-02-66339ea2ba131.png" alt="Forest Honey 250gm">
+                          <div class="tag-text">-27.5%</div>
+                        </div>
+                      </a>
+                      <div class="content">
+                        <h3 class="link-style-6"><a href="https://naturesadhaar.in/product/forest-honey-250gm-6Dv1zf" style="text-decoration:none;color:inherit">Forest Honey – 250gm</a></h3>
+                        <a href="https://naturesadhaar.in/product/forest-honey-250gm-6Dv1zf" style="text-decoration:none;color:inherit">
+                          <div class="money"><span class="one">&#8377; 384</span><span class="two">&#8377; 278 Excl. Taxes</span></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="box box-hv">
+                      <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-2-ltr-Nr5vEN" style="text-decoration:none;color:inherit">
+                        <div class="images hover-style">
+                          <img src="https://naturesadhaar.in/storage/app/public/product/meta/2025-06-13-684bab3f44234.png" alt="A2 Gir Cow Ghee 2 ltr">
+                          <div class="tag-text">-31.5%</div>
+                        </div>
+                      </a>
+                      <div class="content">
+                        <h3 class="link-style-6"><a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-2-ltr-Nr5vEN" style="text-decoration:none;color:inherit">A2 Gir Cow Ghee (2 ltr)</a></h3>
+                        <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-2-ltr-Nr5vEN" style="text-decoration:none;color:inherit">
+                          <div class="money"><span class="one">&#8377; 6592</span><span class="two">&#8377; 4516 Excl. Taxes</span></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="box box-hv">
+                      <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-5-ltr-dbYEiB" style="text-decoration:none;color:inherit">
+                        <div class="images hover-style">
+                          <img src="https://naturesadhaar.in/storage/app/public/product/meta/2025-06-13-684bad73d027b.png" alt="A2 Gir Cow Ghee 5 ltr">
+                          <div class="tag-text">-34%</div>
+                        </div>
+                      </a>
+                      <div class="content">
+                        <h3 class="link-style-6"><a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-5-ltr-dbYEiB" style="text-decoration:none;color:inherit">A2 Gir Cow Ghee (5 ltr)</a></h3>
+                        <a href="https://naturesadhaar.in/product/a2-gir-cow-ghee-5-ltr-dbYEiB" style="text-decoration:none;color:inherit">
+                          <div class="money"><span class="one">&#8377; 16480</span><span class="two">&#8377; 10877 Excl. Taxes</span></div>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="flat-icon page style center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="heading-section">
+              <h2 class="text-unset">Nature's Drive Happy Cow A-2 Ghee</h2>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="box-icon">
+              <div class="icon"><img class="img" src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/premium-quality.png" alt="100% Natural"></div>
+              <div class="content">
+                <h3 class="link-style-6">100% Natural &amp; Virgin</h3>
+                <p>It's a treasure of nature that has no comparison. This is the original, natural, desi ghee, prepared meticulously and rigorously from A2 milk of happy desi cows native to India.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="box-icon">
+              <div class="icon"><img class="img" src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/bilona.png" alt="Vedic Bilona"></div>
+              <div class="content">
+                <h3 class="link-style-6">Vedic Bilona Process</h3>
+                <p>Prepared meticulously and rigorously according to age-old bilona methods from A2 milk of happy desi cows native to India. It's held in reverence being a source of nourishing sustenance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="box-icon">
+              <div class="icon"><img class="img" src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/gluteen.png" alt="Gluten Free"></div>
+              <div class="content">
+                <h3 class="link-style-6">Gluten Free</h3>
+                <p>Our A2 Gir Cow Ghee is 100% gluten-free and chemical-free, safe for all including those with gluten sensitivities. Pure, wholesome and nourishing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specifications Image -->
+    <section class="tf-section2 flat-icon page2 center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="image"><img src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/specifications-2-1100x470.jpg" alt="Specifications"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="tf-section flat-testimonial2 tf-home3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="wrap-testi flex">
+              <div class="box-1">
+                <div class="swiper-container carousel-9">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="inner">
+                        <p>The most wondrous ghee, I have ever bought. I made gajar halwa with it. The ghee was very real and it gave a pleasant smell. I have started using it regularly in cooking. This desi ghee just reminds me of the homemade ghee which my grandmother used to make. I highly recommend this product, it's far superior to other brands.</p>
+                        <div class="author flex-three">
+                          <div class="content">
+                            <h3>Manoj Jain</h3>
+                            <h5 class="text-color-4">Delhi</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="inner">
+                        <p>I seldom mix up the variety of Ghee that we use in our house. This desi Ghee I must say is super pleasant and you get to sense and taste the genuinely pure cow ghee. The texture and flavor are just apt for the dining table especially when all members are lovers of this richly endowed milk product.</p>
+                        <div class="author flex-three">
+                          <div class="content">
+                            <h3>Navin K. Motani</h3>
+                            <h5 class="text-color-4">Noida</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-custom-slider">
+                    <div class="swiper-button-next4 button-slide-custom-next"><i class="far fa-angle-right"></i></div>
+                    <div class="swiper-button-prev4 button-slide-custom-prev"><i class="far fa-angle-left"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-2">
+                <div class="title text-color-1 fw-7">COW IS A PART OF LIFE IN INDIAN TRADITION</div>
+                <h3 class="text-color-1">"The new dimensional slogan for Service to Cow: Forests, forest dwellings and forest dwellers protected together"</h3>
+                <div class="meta link-style-3"><a href="#" class="btn-button flex fw-5">Read more</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="flat-subscribe home">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-5 col-md-12">
+            <div class="heading-section">
+              <h2 class="text-color-1">Subscribe To Newsletter</h2>
+              <h4 class="fw-4 text-color-1">Get instant updates about our new products and special promos!</h4>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-12">
+            <div class="widget-subcribe">
+              <div class="form-subcribe">
+                <form id="subscribe-form" action="https://naturesadhaar.in/subscription" method="post" class="form-submit flex">
+                  <input name="email" value="" class="email" type="email" placeholder="Email Address" required>
+                  <button id="submit" name="submit" type="submit"><span>Subscribe Now</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="clearfix page">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="widget widget-logo">
+            <div class="flat-box">
+              <a href="https://naturesadhaar.in">
+                <img src="https://naturesadhaar.in/public/assets/custom-frontend/assets/images/logo.png" alt="Natures Adhaar" width="200" height="77" style="max-width:100%;height:auto;padding:10px 0;">
+              </a>
+              <h6 style="font-size:16px;line-height:1.6;">
+                Address: <strong>Reg. Off.:</strong> Floor No. Second, H.No. F-89/10, Phase-1, Okhla, Near ESI Hospital, New Delhi - 110020.<br>
+                <strong>Mfg.:</strong> Sugwada Road, Village Goras, Tehsil - Karahal Distt, Sheopur, M.P - 476355
+              </h6>
+              <h6 class="link-style-4">Email: <a href="mailto:info@naturesadhaar.in" class="fw-4">info@naturesadhaar.in</a></h6>
+              <h6 class="link-style-4">Customer Support: <a href="tel:9971200204" class="fw-4">9971200204</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-3 col-12">
+          <div class="widget widget-menu style-2">
+            <div class="title-widget fw-6">Quick Navigation</div>
+            <ul class="box-menu link-style-4">
+              <li><a href="https://naturesadhaar.in">Home</a></li>
+              <li><a href="https://naturesadhaar.in/about-us">About us</a></li>
+              <li><a href="https://naturesadhaar.in/products">Our Products</a></li>
+              <li><a href="#">Applications With Benefits</a></li>
+              <li><a href="https://naturesadhaar.in/helpTopic">Frequently Asked Questions</a></li>
+              <li><a href="https://naturesadhaar.in/contacts">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="widget widget-menu style-4">
+            <div class="title-widget fw-6">Useful Links</div>
+            <ul class="box-menu link-style-4">
+              <li><a href="https://naturesadhaar.in/about-us">About Company</a></li>
+              <li><a href="https://naturesadhaar.in/privacy-policy">Privacy Policy</a></li>
+              <li><a href="https://naturesadhaar.in/terms-and-condition">Terms &amp; Conditions</a></li>
+              <li><a href="https://naturesadhaar.in/refund-policy">Refund policy</a></li>
+              <li><a href="https://naturesadhaar.in/return-policy">Return policy</a></li>
+              <li><a href="https://naturesadhaar.in/cancellation-policy">Cancellation policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="widget-social-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <h5 class="title-bottom fw-4">Copyright &copy; 2024 Nature's Drive India Private limited. All Rights Reserved.</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <div class="__floating-btn" style="position:fixed;bottom:100px;left:20px;z-index:9990; display:none">
+    <a href="https://wa.me/+919971200204?text=Hello%20there!" target="_blank">
+      <img src="https://naturesadhaar.in/public/assets/front-end/img/whatsapp.svg" style="width:50px;height:50px;" alt="Chat on WhatsApp">
+    </a>
+  </div>
+
+  <!-- ============================================================
+       CHATBOT HTML
+  ============================================================ -->
+
+  <!-- Chat Toggle Button -->
+  <button id="na-chat-btn" title="Chat with us" aria-label="Open Nature Aadhar chat assistant">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H6l-2 2V4h16v10z"/>
+    </svg>
+    <span class="na-notif" aria-hidden="true"></span>
+  </button>
+
+  <!-- Chat Box -->
+  <div id="na-chat-box" role="dialog" aria-label="Nature Aadhar Chat Assistant" aria-live="polite">
+
+    <!-- Header -->
+    <div id="na-chat-header">
+      <div class="na-avatar" aria-hidden="true">N</div>
+      <div class="na-hinfo">
+        <p class="na-hname">Nature Aadhar Assistant</p>
+        <p class="na-hsub"><span class="na-online" aria-hidden="true"></span>Online — Ask us anything</p>
+      </div>
+      <button id="na-close-btn" aria-label="Close chat">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="na-chat-msgs" aria-live="polite" aria-atomic="false">
+      <div class="na-msg-wrap">
+        <div class="na-bot-icon" aria-hidden="true">🌿</div>
+        <div class="na-msg bot">
+          🙏 <strong>Namaste!</strong> Welcome to <strong>Natures Adhaar</strong>.<br><br>
+          I can help you with our <strong>A2 Gir Cow Bilona Ghee</strong>, <strong>Forest Honey</strong>, pricing, delivery, and more.<br><br>
+          How can I assist you today?
+        </div>
+      </div>
+      <div class="na-time bot-t">Just now</div>
+    </div>
+
+    <!-- Typing indicator -->
+    <div class="na-typing-wrap" id="na-typing-wrap">
+      <div class="na-bot-icon" aria-hidden="true">🌿</div>
+      <div class="na-typing" aria-label="Assistant is typing">
+        <div class="na-dot"></div>
+        <div class="na-dot"></div>
+        <div class="na-dot"></div>
+      </div>
+    </div>
+
+    <!-- Quick Questions -->
+    <div id="na-quick-qs">
+      <div id="na-quick-label">Frequently asked:</div>
+      <button class="na-q-btn" onclick="naAskQ(this.textContent)">What is A2 Gir Cow Ghee?</button>
+      <button class="na-q-btn" onclick="naAskQ(this.textContent)">What are the prices?</button>
+      <button class="na-q-btn" onclick="naAskQ(this.textContent)">How is Bilona ghee made?</button>
+      <button class="na-q-btn" onclick="naAskQ(this.textContent)">Do you deliver pan India?</button>
+      <button class="na-q-btn" onclick="naAskQ(this.textContent)">What is Forest Honey?</button>
+    </div>
+
+    <!-- Input -->
+    <div id="na-chat-input-row">
+      <input id="na-chat-input" type="text" placeholder="Type your question here..." aria-label="Type a message" maxlength="500" autocomplete="off" />
+      <button id="na-send-btn" aria-label="Send message">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+    <div id="na-chat-footer-note">Powered by AI &bull; <a href="https://naturesadhaar.in" target="_blank">naturesadhaar.in</a></div>
+  </div>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script src="https://naturesadhaar.in/public/assets/front-end/vendor/jquery/dist/jquery-2.2.4.min.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/front-end/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/custom-frontend/app/js/jquery.min.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/custom-frontend/app/js/bootstrap.min.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/custom-frontend/app/js/swiper-bundle.min.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/custom-frontend/app/js/swiper.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/custom-frontend/app/js/main.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/front-end/js/owl.carousel.min.js"></script>
+  <script src="https://naturesadhaar.in/public/assets/front-end/js/home.js"></script>
+
+  <script>
+    function openNav() { document.getElementById("mySidebar").style.width = "250px"; }
+    function closeNav() { document.getElementById("mySidebar").style.width = "0"; }
+  </script>
+
+  <!-- ============================================================
+       CHATBOT JAVASCRIPT
+  ============================================================ -->
+  <script>
+  (function() {
+    'use strict';
+
+    /* ---- Config ---- */
+    const GEMINI_KEY = 'AIzaSyCg7jrsnBO6DL38--JKOnOVe5cXHTpasrU';
+    const GEMINI_MODEL = 'gemini-2.5-flash'; // Switched from gemini-2.5-flash (high demand) to gemini-1.5-flash (stable)
+    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`;
+
+    const SYSTEM_PROMPT = `You are a warm, helpful customer support assistant for "Natures Adhaar" (brand of Nature's Drive India Private Limited), an e-commerce brand selling 100% pure A2 Gir Cow Bilona Ghee and natural Forest Honey from India.
+
+BRAND INFORMATION:
+- Company: Nature's Drive India Private Limited
+- Website: https://naturesadhaar.in
+- Phone / WhatsApp: +919971200204
+- Email: info@naturesadhaar.in
+- Registered Office: Floor No. Second, H.No. F-89/10, Phase-1, Okhla, Near ESI Hospital, New Delhi - 110020
+- Manufacturing Unit: Sugwada Road, Village Goras, Tehsil - Karahal Distt, Sheopur, Madhya Pradesh - 476355
+- Social Media: Facebook (naturestreasure.in), Instagram (@naturesgiftghee), YouTube channel
+
+PRODUCTS & PRICES (MRP → Sale price excl. taxes):
+A2 GIR COW GHEE:
+- 200 ml: MRP ₹675 → ₹560 (17% off)
+- 500 ml: MRP ₹1,698 → ₹1,197 (29.5% off)
+- 1 Litre: MRP ₹3,296 → ₹2,324 (29.5% off)
+- 2 Litre: MRP ₹6,592 → ₹4,516 (31.5% off)
+- 5 Litre: MRP ₹16,480 → ₹10,877 (34% off)
+
+FOREST HONEY:
+- 250 gm: MRP ₹384 → ₹278 (27.5% off)
+- 500 gm: MRP ₹735 → ₹559 (24% off)
+
+KEY PRODUCT FACTS:
+- A2 Gir Cow Ghee is made by the traditional Vedic Bilona method
+- Milk comes from pure Gir cows that graze freely in forest (jungle grazing) — no boundaries, naturally happy and healthy
+- Contains A2 beta-casein protein — easier to digest than regular ghee
+- 100% natural, chemical-free, additive-free, gluten-free, no adulteration
+- Has golden color, rich aroma, and authentic taste — like homemade desi ghee
+- Great for cooking (dal, khichdi, roti, halwa), as a health supplement, for babies, for Ayurvedic use
+- Forest Honey is raw, unprocessed, natural wild honey — no added sugar or preservatives
+- Both products have discount offers on the website
+
+POLICIES:
+- Privacy Policy, Terms & Conditions, Refund Policy, Return Policy, Cancellation Policy all available at naturesadhaar.in
+- For returns/refunds/order issues: call 9971200204 or email info@naturesadhaar.in
+- WhatsApp support also available at +919971200204
+
+YOUR INSTRUCTIONS:
+1. Respond in the SAME language the user uses — Hindi or English (mix is fine too)
+2. Be warm, friendly, and genuinely enthusiastic about the products
+3. Keep answers concise: 2–4 sentences normally, up to 6 if detail is needed
+4. For order tracking, specific delivery dates, or account issues — always direct them to call/WhatsApp 9971200204
+5. Never fabricate prices, policies, or product claims not listed above
+6. If asked something outside your knowledge, say so and direct to the support number
+7. Occasionally encourage users to visit naturesadhaar.in or WhatsApp for orders
+8. Format responses simply — avoid heavy markdown, keep it readable in a chat bubble`;
+
+    /* ---- State ---- */
+    let chatHistory = [];
+    let isLoading = false;
+    let isOpen = false;
+
+    /* ---- Elements ---- */
+    const chatBtn     = document.getElementById('na-chat-btn');
+    const chatBox     = document.getElementById('na-chat-box');
+    const closeBtn    = document.getElementById('na-close-btn');
+    const msgsEl      = document.getElementById('na-chat-msgs');
+    const inputEl     = document.getElementById('na-chat-input');
+    const sendBtn     = document.getElementById('na-send-btn');
+    const typingWrap  = document.getElementById('na-typing-wrap');
+    const quickQsEl   = document.getElementById('na-quick-qs');
+
+    /* ---- Toggle ---- */
+    chatBtn.addEventListener('click', function() {
+      isOpen = !isOpen;
+      chatBox.classList.toggle('open', isOpen);
+      chatBtn.querySelector('.na-notif').style.display = 'none';
+      if (isOpen) { inputEl.focus(); scrollBottom(); }
+    });
+    closeBtn.addEventListener('click', function() {
+      isOpen = false;
+      chatBox.classList.remove('open');
+    });
+
+    /* ---- Helpers ---- */
+    function scrollBottom() {
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }
+
+    function getTime() {
+      var d = new Date();
+      var h = d.getHours(), m = d.getMinutes();
+      var ampm = h >= 12 ? 'PM' : 'AM';
+      h = h % 12 || 12;
+      return h + ':' + (m < 10 ? '0' : '') + m + ' ' + ampm;
+    }
+
+    function addMsg(text, role) {
+      var wrap = document.createElement('div');
+      wrap.className = 'na-msg-wrap' + (role === 'user' ? ' user' : '');
+
+      if (role === 'bot') {
+        var icon = document.createElement('div');
+        icon.className = 'na-bot-icon';
+        icon.setAttribute('aria-hidden', 'true');
+        icon.textContent = '🌿';
+        wrap.appendChild(icon);
+      }
+
+      var bubble = document.createElement('div');
+      bubble.className = 'na-msg ' + role;
+      bubble.innerHTML = text;
+      wrap.appendChild(bubble);
+      msgsEl.appendChild(wrap);
+
+      var timeEl = document.createElement('div');
+      timeEl.className = 'na-time' + (role === 'bot' ? ' bot-t' : '');
+      timeEl.textContent = getTime();
+      msgsEl.appendChild(timeEl);
+
+      scrollBottom();
+    }
+
+    function showTyping() {
+      msgsEl.appendChild(typingWrap);
+      typingWrap.classList.add('show');
+      scrollBottom();
+    }
+
+    function hideTyping() {
+      typingWrap.classList.remove('show');
+    }
+
+    function formatResponse(text) {
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\n\n/g, '<br><br>')
+        .replace(/\n/g, '<br>');
+    }
+
+    /* ---- Send Message with Retry Logic ---- */
+    async function sendMessage(userText, retryCount = 0) {
+      userText = userText.trim();
+      if (!userText || isLoading) return;
+
+      isLoading = true;
+      inputEl.value = '';
+      inputEl.disabled = true;
+      sendBtn.disabled = true;
+
+      if (retryCount === 0) { // Only add user message on first attempt
+        addMsg(userText, 'user');
+        chatHistory.push({ role: 'user', parts: [{ text: userText }] });
+      }
+
+      showTyping();
+
+      try {
+        if (!GEMINI_KEY) {
+          hideTyping();
+          addMsg('⚠️ API key not configured. Please set a valid Google Gemini API key.', 'bot');
+          console.error('GEMINI_KEY is not set or is invalid');
+          isLoading = false;
+          inputEl.disabled = false;
+          sendBtn.disabled = false;
+          return;
+        }
+
+        var response = await fetch(GEMINI_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+            contents: chatHistory,
+            generationConfig: {
+              maxOutputTokens: 500,
+              temperature: 0.75,
+              topP: 0.9
+            },
+            safetySettings: [
+              { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_MEDIUM_AND_ABOVE' },
+              { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_MEDIUM_AND_ABOVE' }
+            ]
+          })
+        });
+
+        var data = await response.json();
+        hideTyping();
+
+        console.log('API Response:', data);
+        console.log('Response Status:', response.status);
+
+        var reply = 'Sorry, I could not get a response right now. Please call us at <strong>9971200204</strong> or WhatsApp us!';
+
+        // Handle rate limiting with retry
+        if (!response.ok && response.status === 429) {
+          if (retryCount < 3) {
+            var delayMs = Math.pow(2, retryCount + 1) * 1000;
+            console.warn(`Rate limited. Retrying in ${delayMs/1000} seconds...`);
+            hideTyping();
+            await new Promise(resolve => setTimeout(resolve, delayMs));
+            // Remove last user message to retry
+            chatHistory.pop();
+            return sendMessage(userText, retryCount + 1);
+          }
+        }
+
+        if (!response.ok) {
+          if (data.error) {
+            console.error('API Error:', data.error.message);
+            reply = 'Server busy: ' + (data.error.message || 'Please try again in a moment. Or call us at 9971200204.');
+          }
+        } else if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) {
+          reply = data.candidates[0].content.parts[0].text || reply;
+          chatHistory.push({ role: 'model', parts: [{ text: reply }] });
+          reply = formatResponse(reply);
+        } else if (data.error) {
+          console.error('API Error:', data.error);
+          reply = 'There was an issue connecting to our assistant. Please call us at <strong>9971200204</strong>.';
+        }
+
+        addMsg(reply, 'bot');
+
+      } catch(err) {
+        hideTyping();
+        console.error('Catch Error:', err);
+        addMsg('Network error: ' + err.message + '. Please check your connection or call us at <strong>9971200204</strong>.', 'bot');
+      }
+
+      isLoading = false;
+      inputEl.disabled = false;
+      sendBtn.disabled = false;
+      inputEl.focus();
+    }
+
+    /* ---- Quick Questions ---- */
+    window.naAskQ = function(q) {
+      if (isLoading) return;
+      sendMessage(q);
+    };
+
+    /* ---- Input Events ---- */
+    sendBtn.addEventListener('click', function() {
+      sendMessage(inputEl.value);
+    });
+
+    inputEl.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage(inputEl.value);
+      }
+    });
+
+    /* ---- Auto-open hint after 8s ---- */
+    setTimeout(function() {
+      if (!isOpen) {
+        var notif = chatBtn.querySelector('.na-notif');
+        if (notif) notif.style.display = 'block';
+      }
+    }, 8000);
+
+  })();
+  </script>
+
+</body>
+</html>
