@@ -4,10 +4,10 @@ export default async function handler(req, res) {
   }
 
   const GEMINI_KEY = process.env.GEMINI_KEY || process.env.GEMINI_API_KEY;
-  const RESEND_KEY = 're_Nvjtx4NW_Eviqgxcga5265d4jckif8vWL'; // Hardcoded as requested, but recommended to use env var
+  const RESEND_KEY = process.env.RESEND_API_KEY; 
   
-  if (!GEMINI_KEY) {
-    return res.status(500).json({ error: 'API key not found in environment variables' });
+  if (!GEMINI_KEY || !RESEND_KEY) {
+    return res.status(500).json({ error: 'API keys not found in environment variables' });
   }
 
   const { contents } = req.body;
