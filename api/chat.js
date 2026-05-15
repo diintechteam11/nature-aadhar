@@ -50,7 +50,7 @@ export default async function handler(req, res) {
             },
             body: JSON.stringify({
               from: 'Nature Adhaar Bot <onboarding@resend.dev>',
-              to: 'diintechteam11@gmail.com',
+              to: 'vectrizeaiteam@gmail.com',
               subject: 'New Lead: ' + leadDetails.split('|')[0].trim(),
               html: `
                 <div style="font-family: sans-serif; padding: 20px; border: 1px solid #056737; border-radius: 12px; max-width: 600px;">
