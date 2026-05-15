@@ -32,7 +32,7 @@ header {
 
 .header_1 #main-nav {
     position: absolute;
-    left: 17.8%;
+    left: 1.8%;
     top: 50%;
     z-index: 0;
     -webkit-transform: translateY(-50%);
