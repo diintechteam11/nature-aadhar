@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 
 STEP-BY-STEP FLOW:
 1. First User Message: Answer briefly and normally.
-2. Second User Message: Answer the question normally, THEN append: "I love your chat! What's your name?"
+2. Second User Message: Answer the question normally, THEN append: "[NEW_BUBBLE]I love your chat! What's your name?"
 3. After User provides Name:
    - Validate Name. If valid, say: "Great! Now what is your mobile number?"
    - If invalid, say: "Yaar sahi to mobile number/name likho"

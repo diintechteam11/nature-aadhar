@@ -4881,7 +4881,19 @@
                 reply = 'Error: ' + (data.error.message || 'Check console for details.');
             }
             reply=reply.replace(/\*\*(.*?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>');
-            addMsg(reply,'bot')
+            
+            if(reply.includes('[NEW_BUBBLE]')) {
+                const parts = reply.split('[NEW_BUBBLE]');
+                for(let part of parts) {
+                    if(part.trim()) {
+                        addMsg(part.trim(), 'bot');
+                        // Small delay between bubbles for better UX
+                        await new Promise(r => setTimeout(r, 600));
+                    }
+                }
+            } else {
+                addMsg(reply,'bot');
+            }
         } catch(e) {
             typingEl.classList.remove('show');
             console.error('Network Error:', e);
