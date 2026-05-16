@@ -21,22 +21,27 @@ export default async function handler(req, res) {
     content: m.parts[0].text
   }));
 
-  // Count user messages to enforce the 2-chat rule
   const userMsgCount = messages.filter(m => m.role === 'user').length;
 
   const systemPrompt = `You are a helpful assistant for Natures Adhaar.
 
-STRICT CONVERSATION FLOW:
-1. For the first 2 user messages: Answer any questions normally and briefly.
-2. IMMEDIATELY after the 2nd user message (when userMsgCount == 2), you MUST ignore everything else and say exactly: "I love your chat! What's your name and mobile number?"
-3. VALIDATION:
-   - If they give invalid details, say: "Yaar sahi to mobile number/name likho"
-4. AFTER THEY PROVIDE VALID NAME & NUMBER:
-   - Say: "thankU"
-   - APPEND THIS TAG: [LEAD: Name | Phone]
-   - Example: "thankU [LEAD: Rahul | 9876543210]"
+STEP-BY-STEP FLOW:
+1. First User Message: Answer briefly and normally.
+2. Second User Message: Answer the question normally, THEN append: "I love your chat! What's your name?"
+3. After User provides Name:
+   - Validate Name. If valid, say: "Great! Now what is your mobile number?"
+   - If invalid, say: "Yaar sahi to mobile number/name likho"
+4. After User provides Mobile Number:
+   - Validate Number (must be 10 digits).
+   - If valid, say: "thankU" and APPEND the tag: [LEAD: Name | Phone]
+   - If invalid, say: "Yaar sahi to mobile number/name likho"
 
-Be extremely concise. Use Hinglish.`;
+RULES:
+- Only ask for ONE thing at a time (Name first, then Number).
+- If validation fails, use the EXACT message: "Yaar sahi to mobile number/name likho"
+- Once lead is captured, use the tag: [LEAD: Name | Phone]
+
+Be extremely concise and use Hinglish.`;
 
   messages.unshift({ role: 'system', content: systemPrompt });
 
@@ -74,10 +79,10 @@ Be extremely concise. Use Hinglish.`;
             body: JSON.stringify({
               from: 'Nature Adhaar Bot <onboarding@resend.dev>',
               to: 'vectrizeaiteam@gmail.com',
-              subject: 'Quick Lead: ' + leadDetails.split('|')[0].trim(),
+              subject: 'Verified Lead: ' + leadDetails.split('|')[0].trim(),
               html: `
                 <div style="font-family: sans-serif; padding: 20px; border: 1px solid #056737; border-radius: 12px; max-width: 600px;">
-                  <h2 style="color: #056737;">New Fast Lead!</h2>
+                  <h2 style="color: #056737;">Verified Chat Lead!</h2>
                   <p><strong>Details:</strong> ${leadDetails}</p>
                   <hr/>
                   <div style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
